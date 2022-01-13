@@ -4,9 +4,9 @@
 * Material Dashboard Angular - v2.6.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/poc2
-* Copyright 2021 Aishvarya Shrivastava (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/poc2/blob/master/LICENSE.md)
+* Product Page: /product/poc2
+* Copyright 2021 Aishvarya Shrivastava ()
+* Licensed under MIT ()
 
 * Coded by Aishvarya Shrivastava
 
