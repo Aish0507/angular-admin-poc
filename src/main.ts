@@ -6,7 +6,7 @@
 
 * Product Page: /product/poc2
 * Copyright 2021 Aishvarya Shrivastava ()
-* Licensed under MIT ()
+* Licensed under MIT (https://github.com/creativetimofficial/poc2/blob/master/LICENSE.md)
 
 * Coded by Aishvarya Shrivastava
 
