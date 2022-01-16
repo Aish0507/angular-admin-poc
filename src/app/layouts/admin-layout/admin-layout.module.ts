@@ -11,9 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
-import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,8 +27,7 @@ import { HttpClient } from '@angular/common/http';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatTooltipModule,
-    HttpClient
+    MatTooltipModule
   ],
   declarations: [
     DashboardComponent,

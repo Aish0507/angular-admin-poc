@@ -27,233 +27,208 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="openDoors">
-                                    <table class="table">
-                                        <tbody>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value="">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <td>Left Door Wagon 1</td>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="radio">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <!--mat-form-field class="example-full-width">
-                                                        <mat-radio-group aria-label="Select an option">
-                                                            <mat-radio-button value="1">Option 1</mat-radio-button>
-                                                            <mat-radio-button value="2">Option 2</mat-radio-button>
-                                                        </mat-radio-group>
-                                                    </mat-form-field-->
-                                                </div>
+                        {{dashboardF?.value | json}}
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="openDoors">
+                                <table class="table" [formGroup]="dashboardF">
+                                    <tbody>
+
+                                        <div class="row" formGroupName="rightDoor_1">
+                                            <div class="col-md-2">
+                                                <td>Right Door Wagon 1</td>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Right Door Wagon 1</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Open Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="airPressure" matInput
+                                                        placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Left Door Wagon 2</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Open Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="doorLeaf" matInput
+                                                        placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Right Door Wagon 2</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Open Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="interLock" matInput
+                                                        placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
                                             </div>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane" id="closeDoors">
-                                    <table class="table">
-                                        <tbody>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Left Door Wagon 1</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Close Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-1">
+                                                <button (click)="openDoor('rightDoor_1')" mat-raised-button
+                                                    type="submit" class="btn btn-danger pull-right">Open Door</button>
+                                                <div class="clearfix"></div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Right Door Wagon 1</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Close Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                        </div>
+                                        <div class="row" formGroupName="leftDoor_2">
+                                            <div class="col-md-2">
+                                                <td>Left Door Wagon 2</td>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Left Door Wagon 2</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Close Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="airPressure" matInput
+                                                        placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <td>Right Door Wagon 2</td>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Air Pressure" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Door Leaf Displ." type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <mat-form-field class="example-full-width">
-                                                        <input matInput placeholder="Interlock Circuit" type="text">
-                                                    </mat-form-field>
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <button mat-raised-button type="submit"
-                                                        class="btn btn-danger pull-right">Close Door</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="doorLeaf" matInput
+                                                        placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
                                             </div>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="interLock" matInput
+                                                        placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button (click)="openDoor('leftDoor_2')" mat-raised-button type="submit"
+                                                    class="btn btn-danger pull-right">Open Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row" formGroupName="rightDoor_2">
+                                            <div class="col-md-2">
+                                                <td>Right Door Wagon 2</td>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="airPressure" matInput
+                                                        placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="doorLeaf" matInput
+                                                        placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input formControlName="interLock" matInput
+                                                        placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button (click)="openDoor('rightDoor_2')" mat-raised-button
+                                                    type="submit" class="btn btn-danger pull-right">Open Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </tbody>
+                                </table>
                             </div>
-                        </form>
+                            <div class="tab-pane" id="closeDoors">
+                                <table class="table">
+                                    <tbody>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <td>Left Door Wagon 1</td>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button mat-raised-button type="submit"
+                                                    class="btn btn-danger pull-right">Close Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <td>Right Door Wagon 1</td>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button mat-raised-button type="submit"
+                                                    class="btn btn-danger pull-right">Close Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <td>Left Door Wagon 2</td>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button mat-raised-button type="submit"
+                                                    class="btn btn-danger pull-right">Close Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <td>Right Door Wagon 2</td>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Air Pressure" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Door Leaf Displ." type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Interlock Circuit" type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button mat-raised-button type="submit"
+                                                    class="btn btn-danger pull-right">Close Door</button>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -274,22 +249,22 @@
                                 <tr>
                                     <td>Left Door Wagon 1</td>
                                     <td>Open</td>
-                                    <td>{{test}}</td>
+                                    <td>12</td>
                                 </tr>
                                 <tr>
                                     <td>Right Door Wagon 1</td>
                                     <td>Close</td>
-                                    <td>{{test}}</td>
+                                    <td>12</td>
                                 </tr>
                                 <tr>
                                     <td>Left Door Wagon 2</td>
                                     <td>Close</td>
-                                    <td>{{test}}</td>
+                                    <td>12</td>
                                 </tr>
                                 <tr>
                                     <td>Right Door Wagon 2</td>
                                     <td>Close</td>
-                                    <td>{{test}}</td>
+                                    <td>12</td>
                                 </tr>
                             </tbody>
                         </table>
