@@ -8,6 +8,7 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
+  test : Date = new Date();
   constructor() { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;

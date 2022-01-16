@@ -8,23 +8,17 @@
                     <div class="card-header card-header-tabs card-header-primary">
                         <div class="nav-tabs-navigation">
                             <div class="nav-tabs-wrapper">
-                                <span class="nav-tabs-title">Tasks:</span>
+                                <span class="nav-tabs-title">Doors:</span>
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link active" href="#profile" data-toggle="tab">
-                                            <i class="material-icons">bug_report</i> Bugs
+                                        <a mat-button class="nav-link active" href="#openDoors" data-toggle="tab">
+                                            <i class="material-icons">lock_open</i> Open Doors
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#messages" data-toggle="tab">
-                                            <i class="material-icons">code</i> Website
-                                            <div class="ripple-container"></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#settings" data-toggle="tab">
-                                            <i class="material-icons">cloud</i> Server
+                                        <a mat-button class="nav-link" href="#closeDoors" data-toggle="tab">
+                                            <i class="material-icons">lock</i> Close Doors
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
@@ -33,39 +27,13 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="profile">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            checked>
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
+                        <form>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="openDoors">
+                                    <table class="table">
+                                        <tbody>
+                                            <div class="row">
+                                                <div class="col-md-2">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input" type="checkbox" value="">
                                                         <span class="form-check-sign">
@@ -73,263 +41,255 @@
                                                         </span>
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value="">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
+                                                <div class="col-md-2">
+                                                    <td>Left Door Wagon 1</td>
                                                 </div>
-                                            </td>
-                                            <td>Flooded: One year later, assessing what was lost and what was found when
-                                                a ravaging rain swept through metro Detroit
-                                            </td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            checked>
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
+                                                <div class="col-md-2">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
                                                 </div>
-                                            </td>
-                                            <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                <div class="col-md-2">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="radio">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <!--mat-form-field class="example-full-width">
+                                                        <mat-radio-group aria-label="Select an option">
+                                                            <mat-radio-button value="1">Option 1</mat-radio-button>
+                                                            <mat-radio-button value="2">Option 2</mat-radio-button>
+                                                        </mat-radio-group>
+                                                    </mat-form-field-->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Right Door Wagon 1</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Open Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Left Door Wagon 2</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Open Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Right Door Wagon 2</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Open Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="closeDoors">
+                                    <table class="table">
+                                        <tbody>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Left Door Wagon 1</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Close Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Right Door Wagon 1</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Close Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Left Door Wagon 2</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Close Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <td>Right Door Wagon 2</td>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Air Pressure" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Door Leaf Displ." type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Interlock Circuit" type="text">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button mat-raised-button type="submit"
+                                                        class="btn btn-danger pull-right">Close Door</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="tab-pane" id="messages">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            checked>
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Flooded: One year later, assessing what was lost and what was found when
-                                                a ravaging rain swept through metro Detroit
-                                            </td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value="">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tab-pane" id="settings">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value="">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            checked>
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Flooded: One year later, assessing what was lost and what was found when
-                                                a ravaging rain swept through metro Detroit
-                                            </td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            checked>
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                            <td class="td-actions text-right">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove"
-                                                    [matTooltipPosition]="'above'"
-                                                    class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12">
                 <div class="card">
-                    <div class="card-header card-header-warning">
-                        <h4 class="card-title">Employees Stats</h4>
-                        <p class="card-category">New employees on 15th September, 2016</p>
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Door Information</h4>
+                        <p class="card-category">Current Status</p>
                     </div>
                     <div class="card-body table-responsive">
                         <table class="table table-hover">
-                            <thead class="text-warning">
-                                <th>ID</th>
+                            <thead class="text-info">
                                 <th>Name</th>
-                                <th>Salary</th>
-                                <th>Country</th>
+                                <th>Status</th>
+                                <th>Last used on</th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Dakota Rice</td>
-                                    <td>$36,738</td>
-                                    <td>Niger</td>
+                                    <td>Left Door Wagon 1</td>
+                                    <td>Open</td>
+                                    <td>{{test}}</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>Minerva Hooper</td>
-                                    <td>$23,789</td>
-                                    <td>Curaçao</td>
+                                    <td>Right Door Wagon 1</td>
+                                    <td>Close</td>
+                                    <td>{{test}}</td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>Sage Rodriguez</td>
-                                    <td>$56,142</td>
-                                    <td>Netherlands</td>
+                                    <td>Left Door Wagon 2</td>
+                                    <td>Close</td>
+                                    <td>{{test}}</td>
                                 </tr>
                                 <tr>
-                                    <td>4</td>
-                                    <td>Philip Chaney</td>
-                                    <td>$38,735</td>
-                                    <td>Korea, South</td>
+                                    <td>Right Door Wagon 2</td>
+                                    <td>Close</td>
+                                    <td>{{test}}</td>
                                 </tr>
                             </tbody>
                         </table>
